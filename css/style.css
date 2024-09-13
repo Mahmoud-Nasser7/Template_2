@@ -1,0 +1,1191 @@
+/*========================================== Start Roles ========================================== */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #19c8fa;
+  --secondary-color: #777777;
+  --third-color: #2c4755;
+  --section-padding: 100px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+  --trans-color: #0d566fcf;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.grid-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.flex-system {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-padding {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.section-background {
+  background-color: var(--section-background);
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+.main-header {
+  text-align: center;
+}
+
+.main-header h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  font-weight: normal;
+}
+
+.main-header p {
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
+
+.main-header h2::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  bottom: -7px;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-header h2::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  bottom: -15px;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 1;
+  border: 1px solid black;
+}
+
+.our-btn {
+  padding: 15px 40px;
+  background-color: var(--main-color);
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+
+/* End Global Rules */
+/* Start Components */
+
+/*========================================== End Roles ========================================== */
+
+/*========================================== Start Header ========================================== */
+header {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header .container {
+  border-bottom: 1px rgb(173 162 162 / 46%) solid;
+  position: relative;
+  height: 110px;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul a {
+  color: white;
+  transition: var(--main-duration);
+  padding: 47px 10px;
+  display: block;
+  font-size: 13px;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+header .icon {
+  color: white;
+  border-left: 2px solid white;
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+header .main-bar {
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+  }
+
+  header .main-bar:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    background-color: #0a0a0a8a;
+  }
+
+  header .main-bar:hover + ul a {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  header .main-bar {
+    display: none;
+  }
+}
+
+/*========================================== End Header ========================================== */
+/*========================================== start landing ========================================== */
+.landing {
+  background-image: url(../images/asset\ 13.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
+
+.landing::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.landing .text {
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  background-color: var(--trans-color);
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+
+  .landing .content {
+    width: 100%;
+  }
+}
+
+.landing .content {
+  max-width: 500px;
+}
+
+.landing .text h2 {
+  margin-bottom: 20px;
+}
+
+.landing .text h2,
+.landing .text p {
+  color: white;
+  line-height: 1.8;
+  word-spacing: 2px;
+}
+
+.landing .left-arrow {
+  top: 50%;
+  position: absolute;
+  left: 30px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.landing .right-arrow {
+  top: 50%;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-50%);
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.landing .circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing .circle li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--section-background);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.landing .circle .active {
+  border-radius: 50%;
+  background-color: var(--main-color);
+  border: 0;
+}
+
+/*========================================== End landing ========================================== */
+
+/*========================================== Start Services ========================================== */
+.services .element {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.services .element h3 {
+  font-size: 20px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.services .element p {
+  line-height: 1.9;
+  max-width: 100%;
+}
+
+.services .element i {
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .services .element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .services .inner-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    column-gap: 40px;
+    row-gap: 60px;
+  }
+}
+
+/*========================================== End Services ========================================== */
+/*========================================== Start Design  ========================================== */
+.design {
+  background-image: url(../images/asset\ 14.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-color: #f6f6f6;
+  position: relative;
+  overflow: hidden;
+}
+
+.design::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.404);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.design .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.design .container img {
+  position: relative;
+  top: 100px;
+}
+
+.design .text {
+  background-color: var(--trans-color);
+  top: 50%;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .design .text {
+    width: 100%;
+    align-items: center;
+  }
+
+  .design .container img {
+    opacity: 0;
+  }
+}
+
+.design .text .list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.design .text .list .icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.design .text .list ul li {
+  margin-bottom: 20px;
+}
+
+/*========================================== End Design  ========================================== */
+
+/*========================================== Start Portfolio ========================================== */
+.portfolio {
+  text-align: center;
+}
+
+.portfolio .links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.portfolio .links ul .active {
+  background-color: #19c8fa;
+  padding: 10px;
+  color: white;
+}
+
+.portfolio .gallary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.portfolio .gallary img {
+  max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .portfolio .gallary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio .gallary {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*========================================== End Portfolio ========================================== */
+/*========================================== start video  ========================================== */
+.video {
+  position: relative;
+}
+.video::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.404);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video video {
+  width: 100%;
+}
+.video .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  background-color: var(--trans-color);
+  color: white;
+  text-align: center;
+}
+.video .text h3,
+.video .text p {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: normal;
+  color: white;
+}
+.video .text button {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: normal;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+/*========================================== end video ========================================== */
+/*========================================== Start About Us ========================================== */
+.about {
+  padding-top: 100px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.about img {
+  position: relative;
+  max-width: 100%;
+  bottom: -133px;
+  margin-top: -125px;
+}
+
+@media (max-width: 450px) {
+  .about img {
+    bottom: -77px;
+  }
+}
+
+/*========================================== End About Us ========================================== */
+/*========================================== Start state ========================================== */
+.state {
+  background-image: url(../images/asset\ 15.png);
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.state::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0 0 0 / 70%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.state .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.state .element {
+  color: white;
+  background-color: #19c9fa85;
+  padding: 50px;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .state .element {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .state .element {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .state .element {
+    flex-basis: 25%;
+  }
+}
+
+.state .element i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.state .element h4 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.state .element p {
+  color: white;
+}
+
+/*========================================== End state ========================================== */
+
+/*========================================== start Testimonials ========================================== */
+
+.testimonials {
+  text-align: center;
+}
+.testimonials .container {
+  gap: 80px;
+}
+
+.testimonials .right-side {
+  width: 50%;
+}
+
+.testimonials .head {
+  width: 90%;
+  margin-bottom: 60px;
+}
+.testimonials .head h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.testimonials .content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+
+.testimonials .content .element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.testimonials .content .element .text {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.testimonials .content .element .text p {
+  text-align: start;
+  color: black;
+  line-height: 1.5;
+}
+.testimonials .content .element .text .writer {
+  text-align: end;
+  color: var(--secondary-color);
+}
+.testimonials img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.testimonials .circle {
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+  bottom: -52px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .testimonials .container {
+    flex-direction: column;
+  }
+  .testimonials .right-side {
+    width: 100%;
+  }
+  .testimonials .circle {
+    left: 50%;
+  }
+  .testimonials .head {
+    width: 100%;
+  }
+}
+.testimonials .circle li {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--section-background);
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px black solid;
+}
+
+.testimonials .circle .active {
+  border-radius: 50%;
+  background-color: var(--main-color);
+  border: 0;
+}
+
+.testimonials .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.testimonials .skills h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.testimonials .skills div {
+  position: relative;
+  width: 100%;
+  text-align: start;
+}
+.testimonials .first {
+  background-color: #f6f6f6;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonials .skill-one .second {
+  background-color: var(--main-color);
+  height: 30px;
+  width: 90%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonials .skill-two .second {
+  background-color: var(--main-color);
+  height: 30px;
+  width: 85%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonials .skill-three .second {
+  background-color: var(--main-color);
+  height: 30px;
+  width: 80%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonials .skill-four .second {
+  background-color: var(--main-color);
+  height: 30px;
+  width: 75%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonials .skills .skill-one h4::before {
+  position: absolute;
+  content: "90%";
+  width: 30px;
+  height: 25px;
+  background-color: black;
+  left: 87%;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 10%;
+  bottom: 2px;
+  padding: 10px 5px 0 5px;
+}
+.testimonials .skills .skill-one h4::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0d7";
+  position: absolute;
+  left: 89%;
+  bottom: -8px;
+}
+
+.testimonials .skills .skill-two h4::before {
+  position: absolute;
+  content: "85%";
+  width: 30px;
+  height: 25px;
+  background-color: black;
+  left: 83%;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 10%;
+  bottom: 2px;
+  padding: 10px 5px 0 5px;
+}
+.testimonials .skills .skill-two h4::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0d7";
+  position: absolute;
+  left: 84%;
+  bottom: -8px;
+}
+
+.testimonials .skills .skill-three h4::before {
+  position: absolute;
+  content: "80%";
+  width: 30px;
+  height: 25px;
+  background-color: black;
+  left: 78%;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 10%;
+  bottom: 2px;
+  padding: 10px 5px 0 5px;
+}
+.testimonials .skills .skill-three h4::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0d7";
+  position: absolute;
+  left: 79%;
+  bottom: -8px;
+}
+
+.testimonials .skills .skill-four h4::before {
+  position: absolute;
+  content: "75%";
+  width: 30px;
+  height: 25px;
+  background-color: black;
+  left: 73%;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 10%;
+  bottom: 2px;
+  padding: 10px 5px 0 5px;
+}
+.testimonials .skills .skill-four h4::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0d7";
+  position: absolute;
+  left: 74%;
+  bottom: -8px;
+}
+
+/*========================================== End Testimonials ========================================== */
+
+/*========================================== Start quote ========================================== */
+.quote {
+  background-color: #777777;
+  background-image: url(../images/asset\ 16.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 300px;
+}
+.quote::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0 0 0 / 60%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.quote .container {
+  position: relative;
+}
+.quote .text {
+  text-align: center;
+}
+.quote .text h6 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+.quote .text p {
+  color: white;
+}
+
+/*========================================== End quote ========================================== */
+/*========================================== Start Pricing ========================================== */
+.pricing {
+  text-align: center;
+}
+
+.pricing .element {
+  background-color: #fcfcfc;
+  padding: 20px 0;
+  border-top: 1px solid var(--main-color);
+  text-align: center;
+  position: relative;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.pricing .main-p {
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.pricing .inner-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pricing .element h2 {
+  border-bottom: 1px solid var(--main-color);
+  padding: 20px 0;
+}
+
+.pricing .element h2 span {
+  font-size: 30px;
+}
+
+.pricing .parag p {
+  padding: 20px 0;
+  color: black;
+}
+
+.pricing .parag hr {
+  position: absolute;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid var(--main-color);
+}
+
+.pricing .parag :last-child {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .buy {
+  margin: 30px 0 20px 0;
+  padding: 20px;
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  background-color: #fcfcfc;
+}
+
+.pricing h5 {
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+/*========================================== End Pricing ========================================== */
+/*========================================== Start Subscribe ========================================== */
+.subscribe {
+  background-image: url(images/asset\ 17.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+.subscribe::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0 0 0 / 70%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.subscribe .container {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.subscribe form {
+  border: 1px white solid;
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.subscribe i {
+  color: white;
+  position: absolute;
+  font-size: 25px;
+  top: 18px;
+  left: 16px;
+}
+
+.subscribe input[type="email"] {
+  padding: 20px 20px 20px 60px;
+  border: none;
+  outline: none;
+  width: 70%;
+  margin: 0;
+  color: white;
+  background-color: transparent;
+}
+
+.subscribe input[type="email"]::placeholder {
+  opacity: 1;
+  color: white;
+}
+
+.subscribe input[type="submit"] {
+  border: none;
+  outline: none;
+  width: 30%;
+  margin: 0;
+  background-color: var(--main-color);
+  color: white;
+  text-transform: uppercase;
+}
+
+.subscribe p {
+  color: white;
+  width: 40%;
+}
+
+@media (max-width: 767px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+
+  .subscribe form {
+    width: 100%;
+  }
+
+  .subscribe p {
+    width: 100%;
+  }
+}
+
+/*========================================== End Subscribe ========================================== */
+/*========================================== Start Contact Us ========================================== */
+
+.contact .inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.contact form {
+  width: 70%;
+}
+@media (max-width: 767px) {
+  .contact .inner-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .contact form {
+    width: 100%;
+  }
+}
+.contact form textarea::placeholder {
+  text-transform: capitalize;
+}
+.contact form input,
+.contact form textarea {
+  display: block;
+  width: 100%;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid #c8c3c3;
+}
+.contact form textarea {
+  height: 200px;
+  margin-bottom: 0;
+}
+.contact form button {
+  display: flex;
+  margin-left: auto;
+}
+.contact .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.contact .text h4 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.contact .text p {
+  line-height: 1.8;
+}
+
+/*========================================== End Contact Us ========================================== */
+/*========================================== Start Footer ========================================== */
+.footer {
+  background-image: url(../images/asset\ 17.jpeg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0 0 0 / 70%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  color: white;
+  position: relative;
+}
+
+.footer .container img {
+  margin-top: -40px;
+  height: 40px;
+}
+
+.footer .container .text h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 30px;
+  border-bottom: 1px white solid;
+  padding: 20px;
+}
+
+.footer .container .text .icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.footer .container p {
+  color: white;
+  margin-bottom: -30px;
+}
+
+.footer .container p span {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+/*========================================== End Footer ========================================== */
